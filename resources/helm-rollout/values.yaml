@@ -1,4 +1,5 @@
 name: hello-kubernetes-rollout
 version: 1.8
 replicaCount: 1
-nodePort: 30500
+nodePortActive: 30500
+nodePortPreview: 30501

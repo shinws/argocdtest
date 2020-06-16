@@ -21,7 +21,8 @@ ArgoCD 예제를 위한 쿠버네티스 리소스 저장소 입니다.
     └── /helm-rollout # helm chart 및 Argo Rollouts를 사용한 manifest 리소스
         ├── /templates
         │   ├── rollout.yaml
-        │   └── service.yaml
+        │   ├── service-active.yaml # Blue 전용 service 
+        │   └── service-preview.yaml # Green 전용 service 
         ├── Chart.yaml
         └── values.yaml
 ```
