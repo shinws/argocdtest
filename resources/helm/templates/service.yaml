@@ -4,9 +4,11 @@ metadata:
   name: {{ .Values.name }}-svc
 spec:
   type: NodePort
-  ports:
-  - port: 80
-    targetPort: 8080
-    NodePort: 30500
   selector:
     app: {{ .Values.name }}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: {{ .Values.nodePort }}
+  
