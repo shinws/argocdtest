@@ -1,3 +1,4 @@
 name: hello-kubernetes
+version: 1.5
 replicaCount: 1
 nodePort: 30500
