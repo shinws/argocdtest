@@ -30,4 +30,4 @@ spec:
       # autoPromotionEnabled는 승격 직전에 롤아웃을 일시 중지하여 새 스택의 승격을 자동으로 비활성화합니다.
       # 이 옵션을 생략하면 기본 동작은 ReplicaSet가 완전히 준비/사용 가능한 즉시 새 스택을 승격시키는 것입니다.
       # 다음 명령어를 사용하여 롤아웃을 재개 할 수 있습니다.`kubectl argo rollouts resume ROLLOUT`
-      autoPromotionEnabled: true
+      autoPromotionEnabled: false
