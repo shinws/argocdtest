@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}
-        image: paulbouwer/hello-kubernetes:{{ .Values.version }}
+        image: argoproj/rollouts-demo:{{ .Values.version }}
         ports:
         - containerPort: 8080
   strategy:

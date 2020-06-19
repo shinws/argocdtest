@@ -1,5 +1,5 @@
-name: hello-kubernetes-rollout
-version: 1.8 # 1.5 and 1.8
+name: rollouts-demo
+version: blue # version 관련 참고 url : https://hub.docker.com/r/argoproj/rollouts-demo/tags
 replicaCount: 2
 nodePortActive: 30500
 nodePortPreview: 30501
