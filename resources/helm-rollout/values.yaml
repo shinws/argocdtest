@@ -1,5 +1,5 @@
 name: rollouts-demo
-version: 1.8 # 1.5, 1.8
+version: blue
 replicaCount: 2
 nodePortActive: 30500
 nodePortPreview: 30501
