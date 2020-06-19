@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
-  # revisionHistoryLimit: 2
+  revisionHistoryLimit: 5
   selector:
     matchLabels:
       app: {{ .Values.name }}
@@ -15,9 +15,15 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}
-        image: paulbouwer/hello-kubernetes:{{ .Values.version }}
+        image: argoproj/rollouts-demo:{{ .Values.version }}
         ports:
         - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
   strategy:
     blueGreen:
       # activeService는 승격시 새 템플리트 해시로 업데이트 할 서비스를 지정합니다.
