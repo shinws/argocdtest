@@ -7,6 +7,6 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
-    NodePort: 30500
+    nodePort: 30500
   selector:
     app: hello-kubernetes
